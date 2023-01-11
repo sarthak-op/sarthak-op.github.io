@@ -7,7 +7,8 @@ export default function Dashboard() {
   return (
     <div className="iframe-container">
       
-      <iframe title="RPA" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=6ca2a612-5515-4682-bf8f-e4efb0b95924&appId=3164e371-51f3-4ac1-b127-dd078bb31c16&autoAuth=true&ctid=0ae51e19-07c8-4e4b-bb6d-648ee58410f4" frameborder="0" allowFullScreen="true"></iframe>     
+      {/* <iframe title="RPA" width="1140" height="541.25" allowtransparency = "true" src="https://app.powerbi.com/reportEmbed?reportId=6ca2a612-5515-4682-bf8f-e4efb0b95924&appId=3164e371-51f3-4ac1-b127-dd078bb31c16&autoAuth=true&ctid=0ae51e19-07c8-4e4b-bb6d-648ee58410f4" frameborder="0" allowFullScreen="true" onload="l()" ></iframe>      */}
+      <iframe title="RPA" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=f7bf03d2-48cb-4afc-9ddc-24340c6eb5ee&autoAuth=true&ctid=0ae51e19-07c8-4e4b-bb6d-648ee58410f4" frameborder="0" allowFullScreen="true"></iframe>
       <img src="https://quickchart.io/chart?c={type:'bar',options:{plugins:{googleSheets:{docId:'1QpZ6W8wt8qVGIQJiIMVGGexoe6VMVoBYB-N2GXyqM70',sheet:'Sheet1',labelColumn:'Name',dataColumns:['Count']}},legend:{display:false}}}" />
 
       {/* <PowerBIEmbed
@@ -59,3 +60,48 @@ export default function Dashboard() {
     </div>
   );
 }
+// import React, { useState, useEffect } from 'react';
+// import Chart from 'chart.js/auto';
+// import axios from 'axios';
+
+// const API_URL = 'https://sheets.googleapis.com/v4/spreadsheets/1QpZ6W8wt8qVGIQJiIMVGGexoe6VMVoBYB-N2GXyqM70/values/Sheet1!A1:E5';
+
+// function Dashboard() {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const result = await axios.get(API_URL, {
+//           headers: {
+//             'Authorization': 'Bearer YOUR_API_KEY'
+//           }
+//         });
+//         setData(result.data);
+//       } catch (error) {
+//         console.error(error);
+//       }
+//     };
+//     fetchData();
+//   }, []);
+
+//   const chartData = {
+//     labels: data.map(d => d.name),
+//     datasets: [
+//       {
+//         label: 'Bar Chart',
+//         data: data.map(d => d.value),
+//         backgroundColor: 'rgba(75, 192, 192, 0.6)',
+//         borderWidth: 1
+//       }
+//     ]
+//   };
+
+//   return (
+//     <div>
+//       <Chart data={chartData} options={{}}/>
+//     </div>
+//   );
+// }
+
+// export default Dashboard;

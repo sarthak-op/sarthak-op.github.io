@@ -75,3 +75,9 @@ ul{
   text-align:center;
   width:100%;
 }
+.welcome{
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  padding-top: 300px;
+}

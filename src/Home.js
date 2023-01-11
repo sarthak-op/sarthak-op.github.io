@@ -6,12 +6,12 @@ import Register from './Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useAuth0} from '@auth0/auth0-react'
 // import { JWTBuilder } from './path/to/jwt-connector';
-
+import logo from './finger.png';
 export default function Home() {
 
   const {isAuthenticated} =useAuth0();
   return (
-    isAuthenticated && (
+    isAuthenticated ? (
   <div className='App'>
     
         <div className="center">
@@ -37,6 +37,13 @@ export default function Home() {
 
    
   </div>
+    ) : ( 
+      
+      <div className='welcome'>
+        <img src={logo} alt="Logo" />
+      </div>
+
     )
+    
   )
 }
